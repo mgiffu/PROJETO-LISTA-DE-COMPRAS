@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quicklist</title>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.svg" alt="">
+    <p><- Voltar</p>
+  </header>
+
+  <main>
+    <form>
+      <h1>Compras da semana</h1>
+      <label for="new-item"></label>
+      <input type="text" id="new-item" name="new-item" placeholder="Adicione um novo item" required>
+  
+      <button type="submit">Adicionar item</button>
+    </form>
+
+    <section>
+      <div id="item" class="flex">
+        <img src="assets/checkbox-default.svg" alt="">
+        <p>Pão de forma</p>
+        <img src="assets/bin.svg" alt="">
+      </div>
+      <div id="item" class="flex">
+        <img src="assets/checkbox-default.svg" alt="">
+        <p>Café preto</p>
+        <img src="assets/bin.svg" alt="">
+      </div>
+      <div id="item" class="flex">
+        <img src="assets/checkbox-default.svg" alt="">
+        <p>Suco de laranja</p>
+        <img src="assets/bin.svg" alt="">
+      </div>
+      <div id="item" class="flex">
+        <img src="assets/checkbox-default.svg" alt="">
+        <p>Bolacha</p>
+        <img src="assets/bin.svg" alt="">
+      </div>
+
+      <div id="alert" class="flex">
+        <img src="assets/alert.svg" alt="">
+        <p>O item foi removido da lista</p>
+        <img src="assets/close.svg" alt="">
+      </div>
+    </section>
+  </main>
+  
+</body>
+</html>
