@@ -19,44 +19,39 @@
   <main>
     <form>
       <div id="text">
-        <p><- Voltar</p>
+        <button type="button" class="back-button">
+          <p><- Voltar</p>
+        </button>
         <h1>Compras da semana</h1>
       </div>
 
       <div id="option" class="grid">
-        <label for="new-item"></label>
-        <input type="text" id="new-item" name="new-item" placeholder="Adicione um novo item" required>
+        <label for="add-item"></label>
+        <input type="text" id="add-item" name="add-item" placeholder="Adicione um novo item" required>
     
         <button type="submit">Adicionar item</button>
       </div>
     </form>
 
-    <section id="itens">
-      <div id="item" class="flex content-item">
-        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
-        <p>Pão de forma</p>
-        <img src="assets/bin.svg" alt="" class="bin">
+    <section id="items-list" class="grid">
+      <div class="flex item">
+        <label for="new-item" class="checkbox-container">
+          <input type="checkbox" id="new-item" name="new-item" class="hidden">
+          <div class="checkbox-icon"></div>
+          <span>Pão de forma</span>
+        </label>
+        <button type="button" class="remove-button">
+          <img src="assets/bin.svg" alt="Remover item">
+        </button>
       </div>
-      <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
-        <p>Café preto</p>
-        <img src="assets/bin.svg" alt="" class="bin">
-      </div>
-      <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
-        <p>Suco de laranja</p>
-        <img src="assets/bin.svg" alt="" class="bin">
-      </div>
-      <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
-        <p>Bolacha</p>
-        <img src="assets/bin.svg" alt="" class="bin">
-      </div>
+      
 
       <div id="alert" class="flex">
-        <img src="assets/alert.svg" alt="">
+        <img src="assets/alert.svg" alt="" id="alert-icon">
         <p>O item foi removido da lista</p>
-        <img src="assets/close.svg" alt="">
+        <button type="button" class="close-alert">
+          <img src="assets/close.svg" alt="Fechar alerta">
+        </button>
       </div>
     </section>
   </main>
