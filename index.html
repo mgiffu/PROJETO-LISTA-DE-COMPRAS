@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quicklist</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
   <header>
-    <img src="assets/logo.svg" alt="">
-    <p><- Voltar</p>
+    <img src="assets/logo.svg" alt="" class="flex">
   </header>
 
   <main>
     <form>
-      <h1>Compras da semana</h1>
-      <label for="new-item"></label>
-      <input type="text" id="new-item" name="new-item" placeholder="Adicione um novo item" required>
-  
-      <button type="submit">Adicionar item</button>
+      <div id="text">
+        <p><- Voltar</p>
+        <h1>Compras da semana</h1>
+      </div>
+
+      <div id="option" class="grid">
+        <label for="new-item"></label>
+        <input type="text" id="new-item" name="new-item" placeholder="Adicione um novo item" required>
+    
+        <button type="submit">Adicionar item</button>
+      </div>
     </form>
 
-    <section>
-      <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="">
+    <section id="itens">
+      <div id="item" class="flex content-item">
+        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
         <p>Pão de forma</p>
-        <img src="assets/bin.svg" alt="">
+        <img src="assets/bin.svg" alt="" class="bin">
       </div>
       <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="">
+        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
         <p>Café preto</p>
-        <img src="assets/bin.svg" alt="">
+        <img src="assets/bin.svg" alt="" class="bin">
       </div>
       <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="">
+        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
         <p>Suco de laranja</p>
-        <img src="assets/bin.svg" alt="">
+        <img src="assets/bin.svg" alt="" class="bin">
       </div>
       <div id="item" class="flex">
-        <img src="assets/checkbox-default.svg" alt="">
+        <img src="assets/checkbox-default.svg" alt="" class="checkbox">
         <p>Bolacha</p>
-        <img src="assets/bin.svg" alt="">
+        <img src="assets/bin.svg" alt="" class="bin">
       </div>
 
       <div id="alert" class="flex">
