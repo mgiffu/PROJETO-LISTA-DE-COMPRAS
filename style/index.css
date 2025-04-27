@@ -179,3 +179,28 @@ form {
     }
   }
 }
+
+@media (width >= 80em) {
+  & body{
+    max-width: 39.1875rem;
+    margin: 0 auto;
+  }
+
+  & header {
+    margin-block: 1.5rem 3.875rem;
+  }
+
+  & #option {
+    grid-auto-flow: column;
+    
+    & input {
+      width: 28.18975rem;
+      margin-right: 1rem;
+    }
+
+    & button {
+      width: 10rem;
+      height: 3rem;
+    }
+  }
+}
