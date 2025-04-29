@@ -34,21 +34,30 @@
     </form>
 
     <section id="items-list" class="grid">
-      <div class="flex item">
-        <label for="new-item" class="checkbox-container">
-          <input type="checkbox" id="new-item" name="new-item" class="hidden">
-          <div class="checkbox-icon"></div>
-          <span>Pão de forma</span>
-        </label>
-        <button type="button" class="remove-button">
-          <img src="assets/bin.svg" alt="Remover item">
-        </button>
-      </div>
-      
+      <template id="item-template">
+        <div class="flex item">
+          <label class="checkbox-container">
+            <input type="checkbox" class="hidden">
+            <div class="checkbox-icon"></div>
+            <span class="item-text"></span>
+          </label>
+          <button type="button" class="remove-button">
+            <img src="assets/bin.svg" alt="Remover item">
+          </button>
+        </div>
+      </template>
 
-      <div id="alert" class="flex">
+      <div id="alert" class="flex hidden">
         <img src="assets/alert.svg" alt="" id="alert-icon">
         <p>O item foi removido da lista</p>
+        <button type="button" class="close-alert">
+          <img src="assets/close.svg" alt="Fechar alerta">
+        </button>
+      </div>
+
+      <div id="checkbox-alert" class="flex">
+        <img src="assets/alert.svg" alt="alert-icon">
+        <p>Marque o item antes de remove-lô</p>
         <button type="button" class="close-alert">
           <img src="assets/close.svg" alt="Fechar alerta">
         </button>
@@ -56,5 +65,6 @@
     </section>
   </main>
   
+  <script src="script.js"></script>
 </body>
 </html>

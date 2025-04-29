@@ -147,8 +147,6 @@ form {
     & input:checked + .checkbox-icon {
       background-image: url(../assets/checkbox-selected.svg);
     }
-
-
   }
 
   & .remove-button {
@@ -178,6 +176,33 @@ form {
       margin-left: auto;
     }
   }
+
+  & #checkbox-alert {
+    align-items: center;
+    background-color: #F59E0B;
+    border-radius: .75rem;
+    padding: .75rem;
+    color: #FFFFFF;
+
+    & #alert-icon {
+      margin-right: .75rem;
+    }
+  
+    & .close-alert {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.show-result {
+  display: block;
 }
 
 @media (width >= 80em) {
