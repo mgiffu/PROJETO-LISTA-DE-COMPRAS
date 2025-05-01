@@ -21,4 +21,39 @@ form.addEventListener("submit", (event) => {
   }
 })
 
+// Adicionando a função para criar novo item na lista
+function addItem(text) {
+  const template = document.getElementById("item-template") // variável para selecionar o template
+  const itemDiv = template.content.cloneNode(true).firstElementChild // variável para clonar o template
+
+  // Gerar id único para cada clone (novo item da lista)
+  const uniqueId = "item-" + Date.now() //gerando o id único atraves da data atual
+
+  // Aplicando o ID único para o checkbox (id e name) e o label (for)
+  const checkbox = itemDiv.querySelector('input[type="checkbox"]') // selecionando o input do tipo checkbox dentro do item colonado
+  checkbox.id = uniqueId //definindo a id do input do clone com o id único gerado
+  checkbox.name = uniqueId //definindo o name do input do clone com o id único gerado
+
+  const label = itemDiv.querySelector("label")
+  label.setAttribute("for", uniqueId) //definindo o for do label do clone com o id único gerado
+
+  // Adiconar o texto do item
+  itemDiv.querySelector(".item-text").textContent = text
+
+  // Adicionando evento de clique no botão de remover item
+  const removeButton = itemDiv.querySelector("remove-button")
+  removeButton.addEventListener("click", () => {
+    // Criando condição para exclusão do item
+    if (checkbox.checked) {
+      itemDiv.remove()
+      showRemovalAlert()
+    } else {
+      showCheckboxRiquiredAlert()
+    }
+  })
+
+  // Adicionando o item na lista
+  itemsList.insertBefore(itemDiv, alert)
+}
+
 
