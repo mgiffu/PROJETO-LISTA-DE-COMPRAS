@@ -75,3 +75,25 @@ function showRemovalAlert() {
   }, 3000)
 }
 
+// Adicionando evento para fechar os alertas manualmente
+// const closeAlertButton = document.querySelectorAll(".close-alert")
+// closeAlertButton.forEach(button => {
+//   button.addEventListener("click", () => {
+//     const parentAlert = this.closest('div[id$="alert"]')
+//     if (parentAlert) {
+//       parentAlert.style.display = "none"
+//     }
+//   })
+// })
+const closeAlertButtons = document.querySelectorAll(".close-alert")
+closeAlertButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    // Encontrar o alerta pai deste botão
+    const parentAlert = this.closest('div[id$="alert"]')
+    if (parentAlert) {
+      parentAlert.style.display = "none"
+    }
+  })
+})
+
+
