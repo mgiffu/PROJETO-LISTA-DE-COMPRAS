@@ -41,14 +41,15 @@ function addItem(text) {
   itemDiv.querySelector(".item-text").textContent = text
 
   // Adicionando evento de clique no botão de remover item
-  const removeButton = itemDiv.querySelector("remove-button")
+  const removeButton = itemDiv.querySelector(".remove-button")
   removeButton.addEventListener("click", () => {
+    const checkbox = itemDiv.querySelector('input[type="checkbox"]')
     // Criando condição para exclusão do item
     if (checkbox.checked) {
       itemDiv.remove()
       showRemovalAlert()
     } else {
-      showCheckboxRiquiredAlert()
+      showCheckboxRequiredAlert()
     }
   })
 
@@ -56,4 +57,21 @@ function addItem(text) {
   itemsList.insertBefore(itemDiv, alert)
 }
 
+// Adicionando função para o checkboxAlert
+function showCheckboxRequiredAlert() {
+  checkboxAlert.style.display = "flex"
+
+  setTimeout(() => {
+    checkboxAlert.style.display = "none"
+  }, 3000)
+}
+
+// Adicionando função para o alert
+function showRemovalAlert() {
+  alert.style.display = "flex"
+
+  setTimeout(() => {
+    alert.style.display = "none"
+  }, 3000)
+}
 
